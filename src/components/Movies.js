@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import home from '../img/home.png';
 
 export default class Movies extends Component {
-  // state = {
-  //   movies: [],
-  // };
-
   render() {
     const { poster, title, year, type, id } = this.props;
-    console.log('desde movies:', title);
 
     return (
       <Link to={`/detail/${id}`} className="card">

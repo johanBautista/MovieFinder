@@ -33,7 +33,7 @@ input#buscador {
 }
 .movies {
   /* background-color: #092c55; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 .link-home img {
   display: flex;
