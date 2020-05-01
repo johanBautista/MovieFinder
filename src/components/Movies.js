@@ -3,22 +3,32 @@ import { Link } from 'react-router-dom';
 import home from '../img/home.png';
 
 export default class Movies extends Component {
-  state = {
-    movies: [],
-  };
+  // state = {
+  //   movies: [],
+  // };
 
   render() {
-    const { movies } = this.props;
-    console.log('desde movies:',movies);
-    
+    const { poster, title, year, type, id } = this.props;
+    console.log('desde movies:', title);
+
     return (
-      <div className="movies">
-        <div className="back-to-home">
-          <Link className="link-home" to={'/'}>
-            <img src={home} alt="home" className="img" />
-          </Link>
+      <Link to={`/detail/${id}`} className="card">
+        <div className="card-image">
+          <figure className="image">
+            <img alt={title} src={poster} />
+          </figure>
         </div>
-      </div>
+
+        <div className="card-content">
+          <div className="media">
+            <div className="media-content">
+              <p className="title is-4">{title} </p>
+              <p className="subtitle is-6">{year}</p>
+              <i>{type}</i>
+            </div>
+          </div>
+        </div>
+      </Link>
     );
   }
 }

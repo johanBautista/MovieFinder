@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
 import Title from './Title';
 import { Search } from '../components/Search';
-import Movies from '../components/Movies';
+import MoviesList from '../components/MoviesList';
 
 class Home extends Component {
   state = {
     data: [],
+    usedSearch: false,
   };
 
   _handleResults = (data) => {
-    this.setState({ data });
+    this.setState({ data, usedSearch: true });
     console.log('desde hresults:', data);
   };
-  _renderResults() {
-    // <Movies  movies={this.state.data} />
-  }
+
+  _renderResults = () => {
+    return this.state.data.length === 0 ? (
+      <p> ☠︎ Results not found!</p>
+    ) : (
+      <MoviesList movies={this.state.data} />
+    );
+  };
+
   render() {
     return (
       <div>
         <Title title="iMovie Finder" />
-        <Search onResults={this._handleResults} />
+        <div>
+          <Search onResults={this._handleResults} />
+        </div>
+        {this.state.usedSearch ? (
+          this._renderResults()
+        ) : (
+          <p>Search to movie please!</p>
+        )}
       </div>
     );
   }

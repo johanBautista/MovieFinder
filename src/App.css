@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: #092c55;
-  min-height: 30vh;
+  /* background-color: #092c55; */
+  /* min-height: 30vh; */
   font-family: 'Poiret One', cursive;
   letter-spacing: 10px;
 }
@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgba(53, 53, 53, 0.714);
   letter-spacing: 10px;
 }
 input#buscador {
@@ -28,11 +28,11 @@ input#buscador {
   margin-left: 10px;
 }
 .boton:hover {
-  background-color: #e7eb02;
+  background-color: #14a237d7;
   border: none;
 }
 .movies {
-  background-color: #092c55;
+  /* background-color: #092c55; */
   min-height: 100vh;
 }
 .link-home img {

@@ -18,14 +18,12 @@ export class Search extends Component {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        const { Search } = data;
-        // this.setState({ Search });
-       this.props.onResults(Search)
+        const { Search = [], totalResults = '0' } = data;
+        this.props.onResults(Search);
       });
   };
 
   render() {
-
     return (
       <form className="App" onSubmit={this._handleSubmit}>
         <input
