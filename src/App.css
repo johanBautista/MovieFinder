@@ -1,7 +1,7 @@
 .App {
+}
+.title-app {
   text-align: center;
-  /* background-color: #092c55; */
-  /* min-height: 30vh; */
   font-family: 'Poiret One', cursive;
   letter-spacing: 10px;
 }
@@ -19,7 +19,7 @@ input#buscador {
   width: 40%;
   padding: 12px;
   border: none;
-  border-radius: 10px;
+  border-bottom: 2px solid #0f5c85;
 }
 .boton {
   padding: 12px 15px;
@@ -28,12 +28,30 @@ input#buscador {
   margin-left: 10px;
 }
 .boton:hover {
-  background-color: #14a237d7;
+  background-color: #0f5c85;
   border: none;
 }
+.section-movie {
+  display: flex;
+}
+.container {
+  margin: 0 3%;
+}
 .movies {
-  /* background-color: #092c55; */
-  /* min-height: 100vh; */
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.card {
+  width: 30%;
+  color: #0f5c85;
+  text-decoration: none;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.title-film {
+  font-size: 2em;
+  color: #0f5c85;
 }
 .link-home img {
   display: flex;

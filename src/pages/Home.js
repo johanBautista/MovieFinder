@@ -16,7 +16,7 @@ class Home extends Component {
 
   _renderResults = () => {
     return this.state.data.length === 0 ? (
-      <p> ☠︎ Results not found!</p>
+      <p className="title-app"> ☠︎ Results not found!</p>
     ) : (
       <MoviesList movies={this.state.data} />
     );
@@ -32,7 +32,7 @@ class Home extends Component {
         {this.state.usedSearch ? (
           this._renderResults()
         ) : (
-          <p>Search to movie please!</p>
+          <p className="title-app">Search to movie please!</p>
         )}
       </div>
     );

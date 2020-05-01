@@ -25,7 +25,7 @@ export class Search extends Component {
 
   render() {
     return (
-      <form className="App" onSubmit={this._handleSubmit}>
+      <form className="title-app" onSubmit={this._handleSubmit}>
         <input
           id="buscador"
           onChange={this._handleChange}
