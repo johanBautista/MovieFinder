@@ -4,6 +4,7 @@ import Movies from './Movies';
 class MoviesList extends Component {
   render() {
     const { movies } = this.props;
+
     return (
       <div className="movies">
         {movies.map((movie) => {
